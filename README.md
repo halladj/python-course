@@ -4,4 +4,4 @@
 ## Our Names:
 
 * Hamza Halladj
-*AZZI Amir
+* AZZI Amir
