@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Submitted Name and Age Pairs</title>
+</head>
+<body>
+    <h1>List of Name and Age Pairs</h1>
+    {% if name_age_pairs %}
+        <ul>
+            {% for pair in name_age_pairs %}
+                <li>{{ pair.name }} - {{ pair.age }} years old</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No entries have been submitted yet.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Form</a>
+</body>
+</html>
