@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Enter university and level</title>
+</head>
+<body>
+    <h1>Enter Your university and your level</h1>
+    <form action="{{ url_for('form2') }}" method="post">
+        <label for="university">university</label>
+        <input type="text" id="university" name="university" required><br><br>
+
+        <label for="level">level</label>
+        <input type="text" id="level" name="level" required><br><br>
+
+       
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

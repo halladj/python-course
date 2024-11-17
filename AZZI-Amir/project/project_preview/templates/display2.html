@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Submitted university and level</title>
+</head>
+<body>
+    <h1>List of univ and level</h1>
+    {% if uni_level %}
+        <ul>
+            {% for pair in uni_level %}
+                <li>{{ pair.university }} - {{ pair.level }} </li>
+            {% endfor %}
+        </ul>
+        
+    {% else %}
+        <p>No entries have been submitted yet.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Form</a>
+</body>
+</html>

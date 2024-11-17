@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Enter Name and Age</title>
+</head>
+<body>
+    <h1>Enter Your Name and Age</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
