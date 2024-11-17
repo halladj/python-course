@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list of subscribers</title>
+</head>    
+<body>
+    <h1>list of Emails and Name and Age and Grade pairs</h1>
+    {% if email_name_age_grade_pairs %}
+        <ul>
+            {% for pair in email_name_age_grade_pairs %}
+                <li>{{ pair.email }} - {{ pair.name }} - {{ pair.age }} years old - {{ pair.grade}}</li>
+            {% endfor %}    
+        </ul>
+    {% else %}
+        <p>no entries have been submitted yet.</p>
+    {% endif %}
+    <a href="{{ url_for('index')}}">Back to from</a>        
+    
+</body>
+</html>
