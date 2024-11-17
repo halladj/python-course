@@ -12,13 +12,16 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form.get('name')
-    age = request.form.get('age')
+    description  = request.form.get('description')
+    age          = request.form.get('age')
 
     # Check if name and age inputs are valid
-    if name and age.isdigit():
+    if description and age.isdigit():
         # Append the name and age as a dictionary to name_age_pairs
-        name_age_pairs.append({'name': name, 'age': int(age)})
+        name_age_pairs.append({
+            'description': description, 
+            'age': int(age)
+        })
     else:
         print("Invalid data submitted")  # Debugging message
 

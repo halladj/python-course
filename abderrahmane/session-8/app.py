@@ -17,14 +17,15 @@ def submit():
     name = request.form.get('name')
     age = request.form.get('age')
     grade = request.form.get('grade')
-
-    return "hey"
     
-
-    # Check if name and age inputs are valid
     if email and name and age.isdigit():
         # Append the name and age as a dictionary to name_age_pairs
-        email_name_age_grade_pairs.append({'email': email, 'name': name, 'age': int(age), 'grade': grade})
+        email_name_age_grade_pairs.append({
+            'email': email, 
+            'name': name, 
+            'age': int(age), 
+            'grade': grade
+        })
     else:
         print("Invalid data submitted")  # Debugging message
 
